@@ -574,7 +574,7 @@ export default function ReelGuessrApp() {
                   {!isPlaying && !isBuffering && stage === 1 && (
                     <button
                       onClick={togglePlayPause}
-                      className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-2xl hover:scale-105 transition z-10"
+                      className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-2xl hover:scale-105 transition z-30"
                     >
                       <svg className="w-8 h-8 fill-current ml-1" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
