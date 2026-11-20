@@ -1,0 +1,17 @@
+services:
+  reelguessr-web:
+    image: nginx:alpine
+    container_name: reelguessr-web
+    restart: unless-stopped
+    ports:
+      - "8085:80"
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: reelguessr-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - 8cdeb443-0178-4cfb-b3cb-2d718b78c286
