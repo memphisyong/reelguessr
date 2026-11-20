@@ -5,7 +5,7 @@ const INITIAL_REELS = [
     round: 1,
     code: "Dep9jgqxRXP",
     url: "https://www.instagram.com/reel/Dep9jgqxRXP/?knvt=M3o0cmx6aGYzeDJo",
-    videoUrl: "/videos/reel1.mp4",
+    videoUrl: "${import.meta.env.BASE_URL}videos/reel1.mp4",
     stats: {
       views: "0",
       comments: "35447",
@@ -21,7 +21,7 @@ const INITIAL_REELS = [
     round: 2,
     code: "De2UMB6h_EK",
     url: "https://www.instagram.com/reel/De2UMB6h_EK/?dmpr=MXA3ZDB2cTQ5a3llMw==",
-    videoUrl: "/videos/reel2.mp4",
+    videoUrl: "${import.meta.env.BASE_URL}videos/reel2.mp4",
     stats: {
       views: "0",
       comments: "142431",
@@ -37,7 +37,7 @@ const INITIAL_REELS = [
     round: 3,
     code: "DYaUzKFqvQM",
     url: "https://www.instagram.com/p/DYaUzKFqvQM/",
-    videoUrl: "/videos/reel3.mp4",
+    videoUrl: "${import.meta.env.BASE_URL}videos/reel3.mp4",
     stats: {
       views: "4785000",
       comments: "364",
@@ -53,7 +53,7 @@ const INITIAL_REELS = [
     round: 4,
     code: "Db80GqpqE-V",
     url: "https://www.instagram.com/reel/Db80GqpqE-V/?gwpx=OXJqOWJ4bW5meDl2",
-    videoUrl: "/videos/reel4.mp4",
+    videoUrl: "${import.meta.env.BASE_URL}videos/reel4.mp4",
     stats: {
       views: "0",
       comments: "1402",
@@ -69,7 +69,7 @@ const INITIAL_REELS = [
     round: 5,
     code: "DbTfogeDC29",
     url: "https://www.instagram.com/p/DbTfogeDC29/",
-    videoUrl: "/videos/reel5.mp4",
+    videoUrl: "${import.meta.env.BASE_URL}videos/reel5.mp4",
     stats: {
       views: "7418000",
       comments: "618",
