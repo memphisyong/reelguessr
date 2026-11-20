@@ -93,7 +93,7 @@ export default function ReelGuessrApp() {
   const [selectedCommentId, setSelectedCommentId] = useState(null);
   const [guessLikes, setGuessLikes] = useState(550000);
   const [volume, setVolume] = useState(0.75);
-  const [muted, setMuted] = useState(false);
+  const [muted, setMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState([]);
@@ -141,7 +141,15 @@ export default function ReelGuessrApp() {
       videoRef.current.load();
       const playPromise = videoRef.current.play();
       if (playPromise !== undefined) {
-        playPromise.then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
+        playPromise
+  .then(() => {
+    setIsPlaying(true);
+    setIsBuffering(false);
+  })
+  .catch(() => {
+    setIsPlaying(false);
+    setIsBuffering(false);
+  });
       }
     }
     if (stage !== 1 && videoRef.current) {
