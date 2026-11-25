@@ -279,7 +279,7 @@ class GlassyAudioEngine {
     osc.stop(now + duration + 0.02);
   }
 
-  playHover(sfxEnabledRef.current, sfxVolume) {
+  playHover(sfxEnabled, sfxVolume) {
     if (!sfxEnabled || sfxVolume <= 0) return;
     const nowMs = performance.now();
     if (nowMs - this.lastHoverAt < 60) return;
@@ -295,7 +295,7 @@ class GlassyAudioEngine {
     });
   }
 
-  playClick(sfxEnabledRef.current, sfxVolume) {
+  playClick(sfxEnabled, sfxVolume) {
     if (!sfxEnabled || sfxVolume <= 0) return;
     this.playTone({
       freqStart: 420,
@@ -315,7 +315,7 @@ class GlassyAudioEngine {
     });
   }
 
-  playLeadIn(sfxEnabledRef.current, sfxVolume) {
+  playLeadIn(sfxEnabled, sfxVolume) {
     if (!sfxEnabled || sfxVolume <= 0) return;
     this.playTone({
       freqStart: 220,
@@ -335,7 +335,7 @@ class GlassyAudioEngine {
     });
   }
 
-  playVerdict(isCorrect, sfxEnabledRef.current, sfxVolume) {
+  playVerdict(isCorrect, sfxEnabled, sfxVolume) {
     if (!sfxEnabled || sfxVolume <= 0) return;
     if (isCorrect) {
       this.playTone({
@@ -379,7 +379,7 @@ class GlassyAudioEngine {
     }
   }
 
-  playScoreTick(progress, sfxEnabledRef.current, sfxVolume) {
+  playScoreTick(progress, sfxEnabled, sfxVolume) {
     if (!sfxEnabled || sfxVolume <= 0) return;
     const freq = 480 + progress * 340;
     this.playTone({
@@ -392,7 +392,7 @@ class GlassyAudioEngine {
     });
   }
 
-  playScoreSettle(sfxEnabledRef.current, sfxVolume) {
+  playScoreSettle(sfxEnabled, sfxVolume) {
     if (!sfxEnabled || sfxVolume <= 0) return;
     this.playTone({
       freqStart: 880,
@@ -404,7 +404,7 @@ class GlassyAudioEngine {
     });
   }
 
-  playMultiplier(tierKey, sfxEnabledRef.current, sfxVolume) {
+  playMultiplier(tierKey, sfxEnabled, sfxVolume) {
     if (!sfxEnabled || sfxVolume <= 0) return;
     const notesByTier = {
       easy: [587.33, 739.99, 880.0],   // D5-F#5-A5
@@ -423,7 +423,7 @@ class GlassyAudioEngine {
     });
   }
 
-  playCallout(isCorrect, sfxEnabledRef.current, sfxVolume) {
+  playCallout(isCorrect, sfxEnabled, sfxVolume) {
     if (!sfxEnabled || sfxVolume <= 0) return;
     if (isCorrect) {
       this.playTone({
@@ -451,7 +451,7 @@ class GlassyAudioEngine {
     }
   }
 
-  playQ2Enter(sfxEnabledRef.current, sfxVolume) {
+  playQ2Enter(sfxEnabled, sfxVolume) {
     if (!sfxEnabled || sfxVolume <= 0) return;
     this.playTone({
       freqStart: 440,
